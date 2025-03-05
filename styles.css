@@ -17,6 +17,10 @@ header {
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    background-image: url(https://cdn.pixabay.com/photo/2023/09/19/01/29/ai-generated-8261668_1280.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .product-list {
