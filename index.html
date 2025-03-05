@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bottle openers</h1>
+    </header>
+
+    <div class="container">
+        <section class="product-list">
+            <h2>Our bottle openers:</h2>
+            <div class="product" id="product1">
+                <img src="https://i5.walmartimages.com/asr/99c66980-c525-4a15-9f79-f2577e0c8ae9_1.ee70602fb4c3c3c8f6d89e3edd1dc2f3.jpeg" alt="Product 1">
+                <h3>The Ultimate Bottle Opener for Every Occasion</h3>
+                <p>$10.00</p>
+                <button class="add-to-cart-btn" data-id="1">Add to Cart</button>
+            </div>
+            <div class="product" id="product2">
+                <img src="https://www.drinkstuff.com/productimg/120479_large.jpg" alt="Product 2">
+                <h3>Pop it Open with Ease and Style</h3>
+                <p>$15.00</p>
+                <button class="add-to-cart-btn" data-id="2">Add to Cart</button>
+            </div>
+            <div class="product" id="product3">
+                <img src="https://www.mbswholesale.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/3/5/3584_small_stainless_steel_hand_held_bottle_opener.jpg" alt="Product 3">
+                <h3>Your Perfect Companion for Opening Bottles</h3>
+                <p>$20.00</p>
+                <button class="add-to-cart-btn" data-id="3">Add to Cart</button>
+            </div>
+            <div class="product" id="product4">
+                <img src="https://abrazo.in/cdn/shop/products/61BaN3tgQ8L._SL1500_1445x.jpg?v=1620019002" alt="Product 3">
+                <h3>Effortless Bottle Opening, Every Time, Anywhere</h3>
+                <p>$20.00</p>
+                <button class="add-to-cart-btn" data-id="4">Add to Cart</button>
+            </div>
+            <div class="product" id="product5">
+                <img src="https://www.jiomart.com/images/product/original/rv4d23g0ig/hasthip-multicolor-waiters-corkscrew-wine-bottle-opener-professional-wood-handle-foil-cutter-product-images-orv4d23g0ig-p600524445-0-202304141256.jpg?im=Resize=(420,420)" alt="Product 3">
+                <h3>Quick and Easy Bottle Opening in Seconds</h3>
+                <p>$20.00</p>
+                <button class="add-to-cart-btn" data-id="5">Add to Cart</button>
+            </div>
+        </section>
+
+        <seticon class="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="total-price">0.00</span></p>
+            <button class="buy-btn" data-id="0">Place order</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
