@@ -15,12 +15,13 @@ class Cart {
     }
 
     addItem(product) {
-        this.items.push(product);
+        const currentTime = new Date(); // Get the current time
+        this.items.push({ ...product, addedAt: currentTime }); // Add the item with the timestamp
         this.totalPrice += product.price;
         this.updateCartDisplay();
     }
 
-    buy(){
+    buy() {
         this.items = [];
         this.totalPrice = 0;
         this.updateCartDisplay();
@@ -44,9 +45,11 @@ class Cart {
             const listItem = document.createElement('li');
             listItem.classList.add('cart-item');
 
+            const formattedTime = item.addedAt.toLocaleString(); // Format the added time
             listItem.innerHTML = `
                 <img src="${item.image}" alt="${item.name}" class="cart-item-image">
                 <span>${item.name} - $${item.price.toFixed(2)}</span>
+                <span>Added at: ${formattedTime}</span>
                 <button class="delete-btn" data-id="${item.id}">Delete</button>
             `;
             cartItemsList.appendChild(listItem);
@@ -76,7 +79,6 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
     button.addEventListener('click', (event) => {
         const productId = parseInt(event.target.getAttribute('data-id'));
         const product = products.find(p => p.id === productId);
-        
         cart.addItem(product);
     });
 });
